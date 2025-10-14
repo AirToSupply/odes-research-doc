@@ -24,13 +24,15 @@ go version go1.22.0 darwin/arm64
 ​	镜像加速：
 
 ```shell
-go env -w GOPROXY="https://goproxy.cn"
+#go env -w GOPROXY="https://goproxy.cn"
+go env -w GOPROXY=https://goproxy.cn.direct
 ```
 
 ​	关闭GOSUMDB:
 
 ```shell
 go env -w GOSUMDB="off"
+go env -w GO111MODULE=on
 ```
 
 ​	如果有其它配置需要修改的，在修改之后通过如下命令验证修改是否生效：
@@ -120,4 +122,5 @@ func main() {
   r.Run(":8080")
 }
 ```
+
 
